@@ -5,7 +5,7 @@ import todoData from '../../todo.json'
 import AddTodo from '../addTodo/AddTodo'
 import Panel from '../panel/Panel'
 
-const Todo = () => {
+const Todo = ({ setTheme, theme }) => {
     const [todos, setTodos] = useState(todoData)
     const [filter, setFilter] = useState('all')
 
@@ -54,7 +54,7 @@ const Todo = () => {
 
     return (
         <div>
-            <Hero />
+            <Hero setTheme={setTheme} theme={theme} />
             <AddTodo addTodo={addTodo} />
             <StyleList>
                 <div className="panel-section">

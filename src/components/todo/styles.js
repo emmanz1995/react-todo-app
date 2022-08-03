@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { Theme } from '../../theme'
 
 export const StyleList = styled.div`
   width: 100%;
@@ -16,15 +17,15 @@ export const StyleList = styled.div`
   }
   .filter-wrapper {
     padding: 15px;
-    background-color: ${props => props.theme.veryDarkDesaturatedBlue};
+    background-color: ${Theme.veryDarkDesaturatedBlue};
     display: flex;
     justify-content: space-between;
     align-items: center;
     span {
-      color: ${props => props.theme.lightGrayishBlue};
+      color: ${Theme.lightGrayishBlue};
     }
     .btn-filter {
-      background-color: ${props => props.theme.veryDarkDesaturatedBlue};
+      background-color: ${Theme.veryDarkDesaturatedBlue};
       border: none;
       cursor: pointer;
     }

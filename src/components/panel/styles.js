@@ -1,10 +1,11 @@
 import styled from 'styled-components';
+import { Theme } from '../../theme'
 
 export const StyledPanel = styled.span`
   width: 100%;
   padding: 15px;
-  background-color: ${props => props.theme.veryDarkDesaturatedBlue};
-  border-bottom: 1px solid ${props => props.theme.veryDarkGrayishBlue};
+  background-color: ${Theme.veryDarkDesaturatedBlue};
+  border-bottom: 1px solid ${Theme.veryDarkGrayishBlue};
   color: #fff;
   display: flex;
   justify-content: space-between;
@@ -22,8 +23,8 @@ export const StyledPanel = styled.span`
   
   .slash {
     text-decoration: line-through;
-    text-decoration-color: ${props => props.theme.veryDarkGrayishBlue};
-    color: ${props => props.theme.veryDarkGrayishBlue};
+    text-decoration-color: ${Theme.veryDarkGrayishBlue};
+    color: ${Theme.veryDarkGrayishBlue};
   }
   
   .delete-btn {

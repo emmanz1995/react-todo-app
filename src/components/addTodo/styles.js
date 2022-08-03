@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { Theme } from '../../theme'
 
 export const StyledForm = styled.form`
   width: 100%;
@@ -11,7 +12,7 @@ export const StyledForm = styled.form`
     border-radius: 4px;
     width: 100%;
     color: #fff;
-    background-color: ${props => props.theme.veryDarkBlue};
+    background-color: ${Theme.veryDarkBlue};
     position: absolute;
     bottom: 80px;
     left: 0;

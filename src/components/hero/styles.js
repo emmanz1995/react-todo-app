@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import bgDark from '../../images/bg-desktop-dark.jpg'
+import { Theme } from '../../theme'
 
 export const HeroContainer = styled.main`
   width: 100%;
@@ -17,7 +18,12 @@ export const HeroContainer = styled.main`
     justify-content: space-between;
     width: 100%;
     h1 {
-      color: ${props => props.theme.lightGrayishBlueHover}
+      color: ${Theme.lightGrayishBlueHover};
+    }
+    .theme-toggle-btn {
+      cursor: pointer;
+      background-color: transparent;
+      border: none;
     }
   }
 `
