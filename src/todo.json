@@ -1,0 +1,17 @@
+[
+  {
+    "id": 1,
+    "text": "Do the shopping!",
+    "done": false
+  },
+  {
+    "id": 2,
+    "text": "Do the washing up!",
+    "done": true
+  },
+  {
+    "id": 3,
+    "text": "Finish the paperwork!",
+    "done": false
+  }
+]
