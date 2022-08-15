@@ -17,4 +17,9 @@ export const StyledForm = styled.form`
     bottom: 80px;
     left: 0;
   }
+  @media screen and (max-width: ${Theme.mobile}) {
+    .form-control {
+      padding: 10px;
+    }
+  }
 `

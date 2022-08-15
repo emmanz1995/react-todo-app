@@ -7,12 +7,12 @@ import { Theme } from './theme'
 import { ThemeProvider } from 'styled-components'
 
 export const getBackground = theme('mode', {
-    light: 'hsl(0, 0%, 98%)',
-    dark: 'hsl(235, 21%, 11%)'
+  light: 'hsl(0, 0%, 98%)',
+  dark: 'hsl(235, 21%, 11%)'
 })
 
 export const getForeground = theme('mode', {
-    dark: 'hsl(0, 0%, 98%)'
+  dark: 'hsl(0, 0%, 98%)'
 })
 
 const GlobalStyle = createGlobalStyle`
@@ -33,14 +33,14 @@ const GlobalStyle = createGlobalStyle`
 `
 
 function getInitialTheme() {
-    const savedTheme = localStorage.getItem('theme')
-    return savedTheme ? JSON.parse(savedTheme) : { mode: 'light' }
+  const savedTheme = localStorage.getItem('theme')
+  return savedTheme ? JSON.parse(savedTheme) : { mode: 'light' }
 }
 
 function App() {
   const [theme, setTheme] = useState(getInitialTheme)
   useEffect(() => {
-      storage.setItem('theme', JSON.stringify(theme))
+    storage.setItem('theme', JSON.stringify(theme))
   }, [theme])
   return (
     <ThemeProvider theme={theme}>

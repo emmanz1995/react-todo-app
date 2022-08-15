@@ -36,6 +36,12 @@ const Todo = ({ setTheme, theme }) => {
         setTodos([ ...todos, formData ])
     }
 
+    const updateTodo = (id, text) => {
+        const findTodo = todos.find((todo) => todo.id === id)
+        const updateText = todos.map((todo) => todo.id === id ? { ...findTodo, text: text } : todo)
+        setTodos(updateText)
+    }
+
     const toggleDone = (id) => {
         const toggle = todos.map((todo) => todo.id === id ? { ...todo, done: !todo.done } : todo)
         setTodos(toggle)
@@ -49,7 +55,15 @@ const Todo = ({ setTheme, theme }) => {
     const todoList = todos
         .filter(FILTER_MAP[filter])
         .map((todo) => (
-            <Panel key={todo.id} todo={todo} deleteTodo={deleteTodo} toggleDone={toggleDone} />
+            <div>
+                <Panel
+                    key={todo.id}
+                    todo={todo}
+                    deleteTodo={deleteTodo}
+                    toggleDone={toggleDone}
+                    updateTodo={updateTodo}
+                />
+            </div>
         ))
 
     return (

@@ -30,4 +30,8 @@ export const StyledPanel = styled.span`
   .delete-btn {
     cursor: pointer;
   }
+  
+  .update-btn {
+    cursor: pointer;
+  }
 `

@@ -30,4 +30,9 @@ export const StyleList = styled.div`
       cursor: pointer;
     }
   }
+  @media screen and (max-width: ${Theme.mobile}) {
+    .panel-section {
+      padding: 10px;
+    }
+  }
 `
