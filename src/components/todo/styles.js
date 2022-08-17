@@ -30,6 +30,13 @@ export const StyleList = styled.div`
       cursor: pointer;
     }
   }
+  .attribution {
+    font-size: 11px; 
+    text-align: center;
+    a {
+      color: hsl(228, 45%, 44%);
+    }
+  }
   @media screen and (max-width: ${Theme.mobile}) {
     .panel-section {
       padding: 10px;

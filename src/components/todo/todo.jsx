@@ -78,6 +78,11 @@ const Todo = ({ setTheme, theme }) => {
                         <span>{filterList}</span>
                     </div>
                 </div>
+                {/*<div className="attribution">*/}
+                {/*    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend*/}
+                {/*    Mentor</a>.*/}
+                {/*    Coded by <a href="https://github.com/emmanz1995" target="_blank">emmanz95</a>.*/}
+                {/*</div>*/}
             </StyleList>
         </div>
     )
