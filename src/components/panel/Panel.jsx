@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
-import { StyledPanel } from './styles'
 import { FaBan, FaCheckCircle, FaTrash, FaEdit } from 'react-icons/fa'
 import Modal from "../modal/Modal";
+import './panel.scss'
 
 const Panel = (props) => {
     const { todo, updateTodo, deleteTodo, toggleDone } = props
@@ -11,7 +11,7 @@ const Panel = (props) => {
     }
     const handleCloseModal = () => setShowHide(false)
     return (
-        <StyledPanel>
+        <div className="panel">
             <div className="header-wrapper">
                 {showHide && <Modal closeModal={handleCloseModal} todoId={todo.id} updateTodo={updateTodo} todo={todo} />}
                 {todo.done ?
@@ -23,7 +23,7 @@ const Panel = (props) => {
                 <FaTrash className="delete-btn" onClick={() => deleteTodo(todo.id)} />{' '}
                 <FaEdit className="update-btn" onClick={() => handleRevealModal(todo.id)} />
             </div>
-        </StyledPanel>
+        </div>
     )
 }
 

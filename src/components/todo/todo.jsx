@@ -1,11 +1,11 @@
 import React, { useState } from 'react'
-import Hero from '../hero/Hero'
-import { StyleList } from './styles'
 import todoData from '../../todo.json'
 import AddTodo from '../addTodo/AddTodo'
 import Panel from '../panel/Panel'
+import './todo.scss'
+import '../../app.scss'
 
-const Todo = ({ setTheme, theme }) => {
+const Todo = () => {
     const [todos, setTodos] = useState(todoData)
     const [filter, setFilter] = useState('all')
 
@@ -68,9 +68,8 @@ const Todo = ({ setTheme, theme }) => {
 
     return (
         <div>
-            <Hero setTheme={setTheme} theme={theme} />
             <AddTodo addTodo={addTodo} />
-            <StyleList>
+            <div className="todo">
                 <div className="panel-section">
                     {todoList}
                     <div className="filter-wrapper">
@@ -83,7 +82,7 @@ const Todo = ({ setTheme, theme }) => {
                 {/*    Mentor</a>.*/}
                 {/*    Coded by <a href="https://github.com/emmanz1995" target="_blank">emmanz95</a>.*/}
                 {/*</div>*/}
-            </StyleList>
+            </div>
         </div>
     )
 }

@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { StyledForm } from './styles'
+import './addTodo.scss'
 
 const AddTodo = ({ addTodo }) => {
     const [input, setInput] = useState('')
@@ -11,9 +11,9 @@ const AddTodo = ({ addTodo }) => {
     }
 
     return (
-        <StyledForm onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} className="todo-form">
             <input type="text" className='form-control' placeholder="Create a new todo..." value={input} onChange={(evt) => setInput(evt.target.value)} />
-        </StyledForm>
+        </form>
     )
 }
 
