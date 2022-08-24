@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import Todo from './components/todo/todo'
 import './app.scss'
 import moonIcon from './images/icon-moon.svg'
