@@ -11,6 +11,8 @@ const Modal = ({ closeModal, updateTodo, todoId, todo }) => {
         closeModal()
     }
 
+    console.log(todoId)
+
     return (
         <Backdrop>
             <StyledModalContainer>
